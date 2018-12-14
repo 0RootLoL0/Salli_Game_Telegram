@@ -6,9 +6,9 @@ user_m = {}
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-	bot.reply_to(message, "добро пожаловать")
-	bot.reply_to(message, "Для осмотра состояния нажми 9")
-	bot.reply_to(message, "для начала отправте любую цыфру")
+	bot.send_message(message, "добро пожаловать")
+	bot.send_message(message, "Для осмотра состояния нажми 9")
+	bot.send_message(message, "для начала отправте любую цыфру")
 	user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,
 									  "root_scena": 0, "schena": 0}
 	print(user_m)
@@ -19,7 +19,7 @@ def echo_all(message):
 	print(message.text)
 	# '''
 	if message.text != "/start":
-		bot.reply_text(
+		bot.send_message(
 			textMess[user_m[update.message.chat.id]["root_scena"]][user_m[update.message.chat.id]["schena"]][
 				"text"])
 		# hard & hangree
@@ -48,8 +48,8 @@ def echo_all(message):
 					user_m[update.message.chat.id]["schena"]][
 					"otvet"][1]["schena"]
 		elif str(update.message.text) == '9':
-			update.message.reply_text("Ед.жизни:  " + str(user_m[update.message.chat.id]["hard"]))
-			update.message.reply_text("Ед.голода: " + str(user_m[update.message.chat.id]["hangree"]))
+			message.send_message("Ед.жизни:  " + str(user_m[update.message.chat.id]["hard"]))
+			message.send_message("Ед.голода: " + str(user_m[update.message.chat.id]["hangree"]))
 		else:
 			update.message.reply_text("вы ошиблись")
 	else:
