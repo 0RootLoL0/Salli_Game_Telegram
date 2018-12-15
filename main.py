@@ -141,7 +141,6 @@ def send_welcome(message):
   photo = open('logotypea.png', 'rb')
   bot.send_photo(message.chat.id, photo)
   bot.send_message(message.chat.id, "добро пожаловать")
-  bot.send_message(message.chat.id, "Для начала нажмит")
   bot.send_message(message.chat.id, textMess[0][0]["text"])
   bot.send_message(message.chat.id, "1. открыть дверь")
   user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0}
