@@ -146,24 +146,29 @@ def send_welcome(message):
   markup = types.ReplyKeyboardMarkup(row_width=1)
   markup.row(types.KeyboardButton("1. открыть дверь"))
   bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
-  user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0}
+  user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0, "pred_schena": True}
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
   if user_m.get(message.chat.id) != None:
     #TODO исправить обработку ошибок бесконечные начисления
-    user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
-    user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
+    if user_m[message.chat.id]["pred_schena"]:
+      user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
+      user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
 
     if str(message.text).split(".")[0] == "1":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
+      user_m[message.chat.id]["pred_schena"] = True
     elif str(message.text).split(".")[0] == "2":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
+      user_m[message.chat.id]["pred_schena"] = True
     elif str(message.text).split(".")[0] == "9":
       bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
                        "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
+      user_m[message.chat.id]["pred_schena"] = False
     else:
       bot.send_message(message.chat.id, "error")
+      user_m[message.chat.id]["pred_schena"] = False
 
 
 
