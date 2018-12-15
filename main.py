@@ -1,5 +1,7 @@
 import telebot
+import re
 from telebot import types
+
 #  ":'######:::::'###::::'##:::::::'##:::::::'####:"
 #  ":##... ##:::'## ##::: ##::::::: ##:::::::. ##::"
 #  ":##:::..:::'##:. ##:: ##::::::: ##:::::::: ##::"
@@ -151,13 +153,12 @@ def echo_all(message):
     #TODO исправить обработку ошибок бесконечные начисления
     user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
     user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
-    bot.send_message(message.chat.id, message.text)
 
-    if str(message.text) == "1":
+    if str(message.text).split(".")[0] == "1":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
-    elif str(message.text) == "2":
+    elif str(message.text).split(".")[0] == "2":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
-    elif str(message.text) == "9":
+    elif str(message.text).split(".")[0] == "9":
       bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
                        "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
     else:

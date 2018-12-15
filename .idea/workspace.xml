@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="168" column="171" selection-start-line="168" selection-start-column="171" selection-end-line="168" selection-end-column="171" />
+            <state relative-caret-position="600">
+              <caret line="156" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -299,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544896302386</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="кнопки">
+      <created>1544897832698</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1544897832698</updated>
+    </task>
+    <task id="LOCAL-00026" summary="дебаг">
+      <created>1544898140921</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1544898140921</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -358,7 +372,9 @@
     <MESSAGE value="оброботчик ошибок" />
     <MESSAGE value="дописал message.chat.id" />
     <MESSAGE value="больше не нужно" />
-    <option name="LAST_COMMIT_MESSAGE" value="больше не нужно" />
+    <MESSAGE value="кнопки" />
+    <MESSAGE value="дебаг" />
+    <option name="LAST_COMMIT_MESSAGE" value="дебаг" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../textmmm/main.py">
@@ -377,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="168" column="171" selection-start-line="168" selection-start-column="171" selection-end-line="168" selection-end-column="171" />
+        <state relative-caret-position="600">
+          <caret line="156" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
