@@ -143,8 +143,9 @@ def send_welcome(message):
   photo = open('logotypea.png', 'rb')
   bot.send_photo(message.chat.id, photo)
   bot.send_message(message.chat.id, "добро пожаловать")
-  bot.send_message(message.chat.id, textMess[0][0]["text"])
-  bot.send_message(message.chat.id, "1. открыть дверь")
+  markup = types.ReplyKeyboardMarkup(row_width=1)
+  markup.row(types.KeyboardButton("1. открыть дверь"))
+  bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
   user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0}
 
 @bot.message_handler(func=lambda message: True)
@@ -170,6 +171,7 @@ def echo_all(message):
 
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
         markup.row(types.KeyboardButton(str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"]))
+    markup.row(types.KeyboardButton("9. моё состояние"))
     bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"], reply_markup=markup)
   else:
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
