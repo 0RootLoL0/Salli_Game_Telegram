@@ -144,10 +144,19 @@ def echo_all(message):
             bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
 
         if str(message.text) == "1":
-            bot.send_message(message.chat.id, "1")
+            bot.send_message(message.chat.id, "ответ №: 1"+
+                             "\nколичевство ответов: "+str(len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))+
+                             "\nномер сцены: "+str(user_m[message.chat.id]["schena"]))
         elif str(message.text) == "2":
-            bot.send_message(message.chat.id, "2")
+            bot.send_message(message.chat.id, "ответ №: 2" +
+                             "\nколичевство ответов: " + str(len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])) +
+                             "\nномер сцены: " + str(user_m[message.chat.id]["schena"]))
         else:
             bot.send_message(message.chat.id, "вы не зарегистриваны")
 
 bot.polling()
+"""
+ответ №: 2
+количевство ответов: 2
+номер сцены: 2
+"""
