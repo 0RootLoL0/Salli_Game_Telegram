@@ -147,6 +147,7 @@ def echo_all(message):
             bot.send_message(message.chat.id, "ответ №: 1"+
                              "\nколичевство ответов: "+str(len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))+
                              "\nномер сцены: "+str(user_m[message.chat.id]["schena"]))
+            user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
         elif str(message.text) == "2":
             bot.send_message(message.chat.id, "ответ №: 2" +
                              "\nколичевство ответов: " + str(len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])) +
