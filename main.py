@@ -151,6 +151,8 @@ def echo_all(message):
     #TODO исправить обработку ошибок бесконечные начисления
     user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
     user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
+    bot.send_message(message.chat.id, message.text)
+
     if str(message.text) == "1":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
     elif str(message.text) == "2":
