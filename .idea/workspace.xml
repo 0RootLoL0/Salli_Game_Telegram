@@ -16,24 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="147" column="38" lean-forward="true" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
-              <folding>
-                <element signature="e#99#2720#0" />
-                <element signature="e#101#494#0" />
-                <element signature="e#496#693#0" />
-                <element signature="e#695#832#0" />
-                <element signature="e#834#1130#0" />
-                <element signature="e#1132#1315#0" />
-                <element signature="e#1317#1562#0" />
-                <element signature="e#1564#1721#0" />
-                <element signature="e#1723#1886#0" />
-                <element signature="e#1888#2132#0" />
-                <element signature="e#2134#2296#0" />
-                <element signature="e#2298#2409#0" />
-                <element signature="e#2411#2523#0" />
-                <element signature="e#2525#2718#0" />
-              </folding>
+            <state relative-caret-position="793">
+              <caret line="148" column="48" selection-start-line="148" selection-start-column="48" selection-end-line="148" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -50,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../textmmm/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="137" column="49" lean-forward="true" selection-start-line="135" selection-start-column="4" selection-end-line="137" selection-end-column="49" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="124" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -191,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544878017808</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="добавил ответ 2">
+      <created>1544878400121</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544878400121</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ssss">
+      <created>1544878789497</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544878789497</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -233,13 +231,15 @@
     <MESSAGE value="8" />
     <MESSAGE value="9" />
     <MESSAGE value="проверка работы команды состояния и проверка перехода по сценам" />
-    <option name="LAST_COMMIT_MESSAGE" value="проверка работы команды состояния и проверка перехода по сценам" />
+    <MESSAGE value="добавил ответ 2" />
+    <MESSAGE value="ssss" />
+    <option name="LAST_COMMIT_MESSAGE" value="ssss" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../textmmm/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="137" column="49" lean-forward="true" selection-start-line="135" selection-start-column="4" selection-end-line="137" selection-end-column="49" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="124" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -252,24 +252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="147" column="38" lean-forward="true" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
-          <folding>
-            <element signature="e#99#2720#0" />
-            <element signature="e#101#494#0" />
-            <element signature="e#496#693#0" />
-            <element signature="e#695#832#0" />
-            <element signature="e#834#1130#0" />
-            <element signature="e#1132#1315#0" />
-            <element signature="e#1317#1562#0" />
-            <element signature="e#1564#1721#0" />
-            <element signature="e#1723#1886#0" />
-            <element signature="e#1888#2132#0" />
-            <element signature="e#2134#2296#0" />
-            <element signature="e#2298#2409#0" />
-            <element signature="e#2411#2523#0" />
-            <element signature="e#2525#2718#0" />
-          </folding>
+        <state relative-caret-position="793">
+          <caret line="148" column="48" selection-start-line="148" selection-start-column="48" selection-end-line="148" selection-end-column="48" />
         </state>
       </provider>
     </entry>

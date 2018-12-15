@@ -143,16 +143,11 @@ def echo_all(message):
         for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
             bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
 
-        if str(message.text) == '1':
-            user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
-        elif str(message.text) == "2" and len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 1:
-            user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
-        elif str(message.text) == '9':
-            bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
-                                              "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
+        if str(message.text) == "1":
+            bot.send_message(message.chat.id, "1")
+        elif str(message.text) == "2":
+            bot.send_message(message.chat.id, "2")
         else:
-            bot.reply_to(message, "вы ошиблись")
-    else:
-        bot.send_message(message.chat.id, "вы не зарегистриваны")
+            bot.send_message(message.chat.id, "вы не зарегистриваны")
 
 bot.polling()
