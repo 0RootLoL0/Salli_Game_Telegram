@@ -6,9 +6,9 @@ user_m = {}
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-	bot.send_message(message, "добро пожаловать")
-	bot.send_message(message, "Для осмотра состояния нажми 9")
-	bot.send_message(message, "для начала отправте любую цыфру")
+	bot.send_message(message.chat.id, "добро пожаловать")
+	bot.send_message(message.chat.id, "Для осмотра состояния нажми 9")
+	bot.send_message(message.chat.id, "для начала отправте любую цыфру")
 	user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,
 									  "root_scena": 0, "schena": 0}
 	print(user_m)
@@ -17,6 +17,6 @@ def send_welcome(message):
 def echo_all(message):
 	print(message.chat.id)
 	print(message.text)
-	bot.reply_to(message, message.text)
+	bot.send_message(message.chat.id, message.text)
 
 bot.polling()
