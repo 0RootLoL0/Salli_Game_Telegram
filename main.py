@@ -159,6 +159,8 @@ def echo_all(message):
     elif str(message.text) == "9":
       bot.send_message("Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
                        "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
+    else:
+      bot.send_message("error")
     bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
       bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
