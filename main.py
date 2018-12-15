@@ -9,7 +9,7 @@ import telebot
 #  ". ######:: ##:::: ##: ########: ########:'####:"
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
-bot = telebot.TeleBot("762157084:AAGOAeVgxH7nXxNt-LV4lDZiDOMzux0oS9U")
+bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 
 textMess = [[
 {
@@ -156,6 +156,9 @@ def echo_all(message):
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
     elif str(message.text) == "2":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
+    elif str(message.text) == "9":
+      bot.send_message("Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
+                       "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
     bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
       bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
