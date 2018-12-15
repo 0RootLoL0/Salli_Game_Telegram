@@ -138,14 +138,8 @@ user_m = {}
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-  bot.send_message(message.chat.id, ":'######:::::'###::::'##:::::::'##:::::::'####:")
-  bot.send_message(message.chat.id, ":##... ##:::'## ##::: ##::::::: ##:::::::. ##::")
-  bot.send_message(message.chat.id, ":##:::..:::'##:. ##:: ##::::::: ##:::::::: ##::")
-  bot.send_message(message.chat.id, ": ######::'##:::. ##: ##::::::: ##:::::::: ##::")
-  bot.send_message(message.chat.id, ":..... ##: #########: ##::::::: ##:::::::: ##::")
-  bot.send_message(message.chat.id, "'##::: ##: ##.... ##: ##::::::: ##:::::::: ##::")
-  bot.send_message(message.chat.id, ". ######:: ##:::: ##: ########: ########:'####:")
-  bot.send_message(message.chat.id, ":......:::..:::::..::........::........::....::")
+  photo = open('logotypea.png', 'rb')
+  bot.send_photo(message.chat.id, photo)
   bot.send_message(message.chat.id, "добро пожаловать")
   bot.send_message(message.chat.id, "Для начала нажмит")
   bot.send_message(message.chat.id, textMess[0][0]["text"])
