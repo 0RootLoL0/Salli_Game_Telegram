@@ -153,19 +153,13 @@ def echo_all(message):
     user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
     user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
     if str(message.text) == "1":
-      bot.send_message(message.chat.id, "ответ №: 1"+
-                         "\nколичевство ответов: "+str(len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))+
-                         "\nномер сцены: "+str(user_m[message.chat.id]["schena"]))
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
     elif str(message.text) == "2":
-      bot.send_message(message.chat.id, "ответ №: 2" +
-                         "\nколичевство ответов: " + str(len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])) +
-                         "\nномер сцены: " + str(user_m[message.chat.id]["schena"]))
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
     bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
       bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
   else:
-    bot.send_message(message.chat.id, "вы не зарегистриваны")
+    bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 
 bot.polling()
