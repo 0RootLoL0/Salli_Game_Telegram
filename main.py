@@ -137,6 +137,7 @@ def send_welcome(message):
 def echo_all(message):
     if user_m.get(message.chat.id) != None:
         bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
+        #TODO исправить обработку ошибок бесконечные начисления
         user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
         user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
         for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
@@ -144,6 +145,8 @@ def echo_all(message):
 
         if str(message.text) == '1':
             user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
+        elif str(message.text) == '2':
+            user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
         elif str(message.text) == '9':
             bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
                                               "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
