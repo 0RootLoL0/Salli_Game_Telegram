@@ -1,5 +1,5 @@
 import telebot
-
+from telebot import types
 #  ":'######:::::'###::::'##:::::::'##:::::::'####:"
 #  ":##... ##:::'## ##::: ##::::::: ##:::::::. ##::"
 #  ":##:::..:::'##:. ##:: ##::::::: ##:::::::: ##::"
@@ -160,9 +160,14 @@ def echo_all(message):
                        "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
     else:
       bot.send_message(message.chat.id, "error")
-    bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
+
+
+
+    markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
+
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
-      bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
+        markup.row(types.KeyboardButton(str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"]))
+    bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"], reply_markup=markup)
   else:
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 

@@ -19,8 +19,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
+            <state relative-caret-position="777">
+              <caret line="168" column="171" selection-start-line="168" selection-start-column="171" selection-end-line="168" selection-end-column="171" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -282,7 +285,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544895108104</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="дописал message.chat.id">
+      <created>1544895426563</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1544895426563</updated>
+    </task>
+    <task id="LOCAL-00024" summary="больше не нужно">
+      <created>1544896302386</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1544896302386</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -339,7 +356,9 @@
     <MESSAGE value="совсем чучучуть" />
     <MESSAGE value="salli перенос бота добавление состояния" />
     <MESSAGE value="оброботчик ошибок" />
-    <option name="LAST_COMMIT_MESSAGE" value="оброботчик ошибок" />
+    <MESSAGE value="дописал message.chat.id" />
+    <MESSAGE value="больше не нужно" />
+    <option name="LAST_COMMIT_MESSAGE" value="больше не нужно" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../textmmm/main.py">
@@ -358,8 +377,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
+        <state relative-caret-position="777">
+          <caret line="168" column="171" selection-start-line="168" selection-start-column="171" selection-end-line="168" selection-end-column="171" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
