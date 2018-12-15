@@ -130,8 +130,9 @@ user_m = {}
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
   bot.send_message(message.chat.id, "добро пожаловать")
-  bot.send_message(message.chat.id, "Для начала нажмите 1")
+  bot.send_message(message.chat.id, "Для начала нажмит")
   bot.send_message(message.chat.id, textMess[0][0]["text"])
+  bot.send_message(message.chat.id, "1. открыть дверь")
   user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0}
 
 @bot.message_handler(func=lambda message: True)
@@ -139,11 +140,11 @@ def echo_all(message):
   if user_m.get(message.chat.id) != None:
     if user_m[message.chat.id]["schena"] != 0:
       bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
-    #TODO исправить обработку ошибок бесконечные начисления
-    user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
-    user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
-    for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
-      bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
+      #TODO исправить обработку ошибок бесконечные начисления
+      user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
+      user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
+      for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
+        bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
 
     if str(message.text) == "1":
       bot.send_message(message.chat.id, "ответ №: 1"+
