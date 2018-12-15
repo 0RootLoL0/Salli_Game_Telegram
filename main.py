@@ -130,8 +130,7 @@ user_m = {}
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
 	bot.send_message(message.chat.id, "добро пожаловать")
-	bot.send_message(message.chat.id, "Для осмотра состояния нажми 9")
-	bot.send_message(message.chat.id, "для начала отправте любую цыфру")
+	bot.send_message(message.chat.id, "Для начала нажмите 1")
 	user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0}
 
 @bot.message_handler(func=lambda message: True)
@@ -140,6 +139,8 @@ def echo_all(message):
         bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"])
         user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
         user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
+        for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
+            bot.send_message(message.chat.id, str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"])
     else:
         bot.send_message(message.chat.id, "вы не зарегистриваны")
 
