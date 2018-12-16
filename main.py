@@ -13,6 +13,7 @@ from telebot import types
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 
+#TODO вынести всё в отдельный файл
 textMess = [[
 {
   "text":"Вы видите мрак. Чувствуете холод.  Вы в недоумении. Вдруг ваши веки открылись, и вы встали с холодного пола. Ваша голова раскалывается. На уме только одно. «Где я?».Вы видите небольшую комнату, было темно ,хоть глаз выколи. Вы аккуратно идёте вперёд , и  ощупываете очертания двери.",
@@ -151,20 +152,24 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
   if user_m.get(message.chat.id) != None:
-    #TODO исправить обработку ошибок бесконечные начисления
     if user_m[message.chat.id]["pred_schena"]:
       user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
       user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
 
     if str(message.text).split(".")[0] == "1":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
+      user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
       user_m[message.chat.id]["pred_schena"] = True
     elif str(message.text).split(".")[0] == "2":
       user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
+      user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
       user_m[message.chat.id]["pred_schena"] = True
     elif str(message.text).split(".")[0] == "9":
       bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
                        "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
+      user_m[message.chat.id]["pred_schena"] = False
+    elif str(message.text) == "statistics_0rootlol0":
+      bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
       user_m[message.chat.id]["pred_schena"] = False
     else:
       bot.send_message(message.chat.id, "error")

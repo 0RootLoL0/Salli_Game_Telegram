@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/continuity.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="173" column="53" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
+            <state relative-caret-position="642">
+              <caret line="171" column="100" selection-start-line="171" selection-start-column="100" selection-end-line="171" selection-end-column="100" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -29,15 +30,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logotypea.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
+        <entry file="file://$PROJECT_DIR$/continuity.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="187" column="109" lean-forward="true" selection-start-line="186" selection-start-column="20" selection-end-line="187" selection-end-column="109" />
+            <state relative-caret-position="315">
+              <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+              <folding>
+                <element signature="e#3#396#0" />
+                <element signature="e#398#595#0" />
+                <element signature="e#597#734#0" />
+                <element signature="e#736#1032#0" />
+                <element signature="e#1034#1217#0" />
+                <element signature="e#1219#1464#0" />
+                <element signature="e#1466#1623#0" />
+                <element signature="e#1625#1788#0" />
+                <element signature="e#1790#2034#0" />
+                <element signature="e#2036#2198#0" />
+                <element signature="e#2200#2311#0" />
+                <element signature="e#2313#2425#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,6 +68,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../textmmm/main.py" />
+        <option value="$PROJECT_DIR$/continuity.json" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -73,6 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -84,7 +96,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +343,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544900127248</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix">
+      <created>1544901523275</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1544901523275</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix lavel">
+      <created>1544904755278</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1544904755278</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -358,7 +383,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.46524063" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32834226" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -367,9 +392,47 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="7" />
-    <MESSAGE value="8" />
     <MESSAGE value="9" />
     <MESSAGE value="проверка работы команды состояния и проверка перехода по сценам" />
     <MESSAGE value="добавил ответ 2" />
@@ -393,7 +456,9 @@
     <MESSAGE value="дебаг" />
     <MESSAGE value="оброботчик кнопок" />
     <MESSAGE value="картинка" />
-    <option name="LAST_COMMIT_MESSAGE" value="картинка" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="fix lavel" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix lavel" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../textmmm/main.py">
@@ -405,18 +470,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="187" column="109" lean-forward="true" selection-start-line="186" selection-start-column="20" selection-end-line="187" selection-end-column="109" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logotypea.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/continuity.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+          <folding>
+            <element signature="e#3#396#0" />
+            <element signature="e#398#595#0" />
+            <element signature="e#597#734#0" />
+            <element signature="e#736#1032#0" />
+            <element signature="e#1034#1217#0" />
+            <element signature="e#1219#1464#0" />
+            <element signature="e#1466#1623#0" />
+            <element signature="e#1625#1788#0" />
+            <element signature="e#1790#2034#0" />
+            <element signature="e#2036#2198#0" />
+            <element signature="e#2200#2311#0" />
+            <element signature="e#2313#2425#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="173" column="53" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
+        <state relative-caret-position="642">
+          <caret line="171" column="100" selection-start-line="171" selection-start-column="100" selection-end-line="171" selection-end-column="100" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
