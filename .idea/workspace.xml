@@ -19,10 +19,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-824">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="510">
+              <caret line="351" column="146" lean-forward="true" selection-start-line="351" selection-start-column="146" selection-end-line="351" selection-end-column="146" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#616#3240#0" />
+                <element signature="e#617#3238#0" />
                 <element signature="e#619#1012#0" />
                 <element signature="e#1014#1211#0" />
                 <element signature="e#1213#1350#0" />
@@ -36,6 +38,7 @@
                 <element signature="e#2816#2927#0" />
                 <element signature="e#2929#3041#0" />
                 <element signature="e#3043#3236#0" />
+                <element signature="e#3240#7678#0" />
                 <element signature="e#3242#3774#0" />
                 <element signature="e#3776#3924#0" />
                 <element signature="e#3926#4066#0" />
@@ -449,7 +452,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544989882311</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fix continuity add command">
+      <created>1544990962904</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1544990962904</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix command">
+      <created>1544991192390</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1544991192390</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -470,7 +487,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.5005348" side_tool="true" weight="0.24986821" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49973643" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49973643" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -535,8 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="13" />
-    <MESSAGE value="14" />
     <MESSAGE value="15" />
     <MESSAGE value="16" />
     <MESSAGE value="17" />
@@ -560,7 +575,9 @@
     <MESSAGE value="back" />
     <MESSAGE value="add root 1" />
     <MESSAGE value="root 1 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="root 1 fix" />
+    <MESSAGE value="fix continuity add command" />
+    <MESSAGE value="fix command" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix command" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
@@ -611,10 +628,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-824">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="510">
+          <caret line="351" column="146" lean-forward="true" selection-start-line="351" selection-start-column="146" selection-end-line="351" selection-end-column="146" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#616#3240#0" />
+            <element signature="e#617#3238#0" />
             <element signature="e#619#1012#0" />
             <element signature="e#1014#1211#0" />
             <element signature="e#1213#1350#0" />
@@ -628,6 +647,7 @@
             <element signature="e#2816#2927#0" />
             <element signature="e#2929#3041#0" />
             <element signature="e#3043#3236#0" />
+            <element signature="e#3240#7678#0" />
             <element signature="e#3242#3774#0" />
             <element signature="e#3776#3924#0" />
             <element signature="e#3926#4066#0" />
