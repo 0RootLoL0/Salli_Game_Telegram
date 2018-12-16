@@ -12,7 +12,7 @@ from telebot import types
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 
-#TODO вынести всё в отдельный файл
+# TODO вынести всё в отдельный файл
 textMess = [[
 {
   "text":"Вы видите мрак. Чувствуете холод.  Вы в недоумении. Вдруг ваши веки открылись, и вы встали с холодного пола. Ваша голова раскалывается. На уме только одно. «Где я?».Вы видите небольшую комнату, было темно ,хоть глаз выколи. Вы аккуратно идёте вперёд , и  ощупываете очертания двери.",
@@ -332,7 +332,7 @@ textMess = [[
 ]
 ]
 user_m = {}
-
+@bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
   user_m[message.chat.id]["pred_schena"] = False
@@ -346,6 +346,13 @@ def teleport(message, numOtvet):
   user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][numOtvet]["schena"]
   user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
   user_m[message.chat.id]["pred_schena"] = True
+
+def teleport_admin(message):
+  user_m[message.chat.id]["schena"] = int(str(message.text).split("_")[2])
+  user_m[message.chat.id]["root_scena"] = str(message.text).split("_")[1]
+  user_m[message.chat.id]["pred_schena"] = True
+  message.text = "хех"
+  echo_all(message)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -376,8 +383,8 @@ def echo_all(message):
       teleport(message, 4)
     elif str(message.text).split(".")[0] == "9":
       condition(message)
-    elif str(message.text) == "statistics_0rootlol0":
-      statistics_0rootlol0(message)
+    elif str(message.text).split("_")[0] == "/teleport.admin":
+      teleport_admin(message)
     else:
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
