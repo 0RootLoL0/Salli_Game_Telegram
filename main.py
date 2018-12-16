@@ -349,7 +349,7 @@ def teleport(message, numOtvet):
 
 def teleport_admin(message):
   user_m[message.chat.id]["schena"] = int(str(message.text).split("_")[2])
-  user_m[message.chat.id]["root_scena"] = str(message.text).split("_")[1]
+  user_m[message.chat.id]["root_scena"] = int(str(message.text).split("_")[1])
   user_m[message.chat.id]["pred_schena"] = True
   message.text = "хех"
   echo_all(message)
