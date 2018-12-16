@@ -135,8 +135,205 @@ textMess = [[
   "hangre":0,
   "root":1
 }
-]]
+],[
+{
+  "text":"что-же здесь произошло» открыв дверь вы увидели небольшую комнату. На стенах были засохшие брызги крови, на полу валялись гильзы.\nОсмотрев комнату вы находите: план эвакуации, лифт, и две двери. На одной написано «ВЫХОД»",
+  "otvet":[
+    {"text":"Осмотреть гильзы","schena":1},
+    {"text":"Осмотреть план эвакуации","schena":2},
+    {"text":"Вызвать лифт","schena":3},
+    {"text":"Открыть дверь с надписью выход","schena":4},
+    {"text":"Открыть вторую дверь","schena":5}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Вы осматриваете гильзы, похоже они свежие.",
+  "otvet":[
+    {"text":"Вернуться","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"«планировка эвакуации сектора А12»",
+  "otvet":[
+    {"text":"Вернуться","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+
+{
+  "text":"Вы вызываете лифт… он открывается. Раздался электронный голос «минус четвертый этаж»",
+  "otvet":[
+    {"text":"Вернуться","schena":8},
+    {"text":"Зайти в лифт","schena":9}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"вы видите лестницу, она идёт вниз и вверх",
+  "otvet":[
+    {"text":"вверх","schena":6},
+    {"text":"вниз","schena":7}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"вы открываете дверь, и видите страшную металлическую статую. Вдруг она включается и говорит: «режим сканирования. Цель обнаружена» не успев и глазом моргнуть как вас расстреливает дроид. Вы падаете на пол, истекая кровью. Все окружение стало темнеть. И темнеть. И темнеть…. Вы погибли. Теперь вы можете начать с самого начала, или приложить игру через 1 мин.",
+  "otvet":[
+  ],
+  "Hard":-10,
+  "hangre":-10,
+  "root":1
+},
+
+{
+  "text":"вы поднимаетесь на верх. Вот и выход. Вы подходите к большим металлическим воротам. Они закрыты Вряд ли вам удастся их открыть. Вы видите труп. Осмотрев его, вы нашли сумку.\nв сумме вы нашли бинты. +2 ед жизни. --- 20%",
+  "otvet":[
+    {"text":"вернуться","schena":3}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"вы решили спуститься в самый низ. Вам страшно. Но вас зовет  неизвестность.\n(конец. скоро будет продолжение)",
+  "otvet":[
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Хех нет ничего это затычка",
+  "otvet":[
+    {"text":"в начало Root 1","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+
+{
+  "text":"вы заходите в лифт, он ещё  работает. Можно спуститься вниз и на верх",
+  "otvet":[
+    {"text":"наверх","schena":10},
+    {"text":"вниз","schena":11}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"нажимаете на кнопку -1. Лифт начал медленно подниматься. Вот он остановился. Железные двери начали со скрипом открываться. И вдруг раздался громкий треск, и лифт с грохотом провалился!\n-2 ел. Жизни.\nБудьте осторожны, если вы потеряете все 10 единиц жизни, вы проиграете!",
+  "otvet":[
+  ],
+  "Hard":-2,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+},
+
+{
+  "text":"Терь вы решаете осмотреть свое состояние и двинуться в путь.",
+  "otvet":[
+    {"text":"открываете дверь с названием «ВЫХОД»","schena":0}
+  ],
+  "Hard":0,
+  "hangre":0,
+  "root":1
+}
+]
+]
 user_m = {}
+
+def statistics_0rootlol0(message):
+  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
+  user_m[message.chat.id]["pred_schena"] = False
+
+def condition(message):
+  bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"]) +
+                                  "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
+  user_m[message.chat.id]["pred_schena"] = False
+
+def teleport(message, numOtvet):
+  user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][numOtvet]["schena"]
+  user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
+  user_m[message.chat.id]["pred_schena"] = True
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -156,20 +353,19 @@ def echo_all(message):
       user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
 
     if str(message.text).split(".")[0] == "1":
-      user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][0]["schena"]
-      user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
-      user_m[message.chat.id]["pred_schena"] = True
-    elif str(message.text).split(".")[0] == "2":
-      user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][1]["schena"]
-      user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
-      user_m[message.chat.id]["pred_schena"] = True
+      teleport(message, 0)
+    elif str(message.text).split(".")[0] == "2" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 2:
+      teleport(message, 1)
+    elif str(message.text).split(".")[0] == "3" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 3:
+      teleport(message, 2)
+    elif str(message.text).split(".")[0] == "4" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 4:
+      teleport(message, 3)
+    elif str(message.text).split(".")[0] == "5" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 5:
+      teleport(message, 4)
     elif str(message.text).split(".")[0] == "9":
-      bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"])+
-                       "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
-      user_m[message.chat.id]["pred_schena"] = False
+      condition(message)
     elif str(message.text) == "statistics_0rootlol0":
-      bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
-      user_m[message.chat.id]["pred_schena"] = False
+      statistics_0rootlol0(message)
     else:
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
