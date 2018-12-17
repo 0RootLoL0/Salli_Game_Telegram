@@ -358,7 +358,7 @@ def condition(message):
   db.commit()
 
 def teleport(message, numOtvet, hard, hangree):
-  cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id=" + message.chat.id)
+  cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id=" + str(message.chat.id))
   results = cursor.fetchall()
   schena = textMess[results[0][0]][results[0][1]]["otvet"][numOtvet]["schena"]
   root_schena = textMess[results[0][0]][results[0][0]]["root"]
