@@ -16,10 +16,7 @@ f.close()
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-with open('user.json') as fa:
-  user_m = json.load(fa)
-f.close()
-
+user_m = {}
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
