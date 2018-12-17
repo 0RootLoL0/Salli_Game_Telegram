@@ -1,6 +1,4 @@
 import telebot
-import sqlite3
-import datetime
 from telebot import types
 
 #  ":'######:::::'###::::'##:::::::'##:::::::'####:"
@@ -13,10 +11,9 @@ from telebot import types
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-db = sqlite3.connect('chat.sqlite')
+
 # TODO вынести всё в отдельный файл
-textMess = [
-[
+textMess = [[
 {
   "text":"Вы видите мрак. Чувствуете холод.  Вы в недоумении. Вдруг ваши веки открылись, и вы встали с холодного пола. Ваша голова раскалывается. На уме только одно. «Где я?».Вы видите небольшую комнату, было темно ,хоть глаз выколи. Вы аккуратно идёте вперёд , и  ощупываете очертания двери.",
   "otvet":[
@@ -334,49 +331,29 @@ textMess = [
 }
 ]
 ]
-
-def db_new_row(id, username):
-  cursor = db.cursor()
-  cursor.execute("INSERT INTO Users ('chat_id','Username','data') VALUES ("+str(id)+", '"+username+"', '"+str(datetime.datetime.now())+"')")
-  db.commit()
+user_m = {}
 
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
-  cursor = db.cursor()
-  cursor.execute("SELECT COUNT(*) FROM Users")
-  results = cursor.fetchall()
-  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(results[0][0]))
-  cursor2 = db.cursor()
-  cursor2.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
-  db.commit()
+  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
+  user_m[message.chat.id]["pred_schena"] = False
 
 def condition(message):
-  cursor = db.cursor()
-  cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id="+message.chat.id)
-  results = cursor.fetchall()
-  bot.send_message(message.chat.id, "Ед.жизни:  " + str(results[0][0]) +
-                                  "\nЕд.голода: " + str(results[0][1]))
-  cursor2 = db.cursor()
-  cursor2.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
-  db.commit()
+  bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[message.chat.id]["hard"]) +
+                                  "\nЕд.голода: " + str(user_m[message.chat.id]["hangree"]))
+  user_m[message.chat.id]["pred_schena"] = False
 
-def teleport(message, numOtvet, hard, hangree):
-  cursor = db.cursor()
-  cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id=" + str(message.chat.id))
-  results = cursor.fetchall()
-  schena = textMess[results[0][0]][results[0][1]]["otvet"][numOtvet]["schena"]
-  root_schena = textMess[results[0][0]][results[0][0]]["root"]
-  cursor2 = db.cursor()
-  cursor.execute("UPDATE Users SET schena_n_loop=1 schena="+str(schena)+" root="+str(root_schena)+" hard="+str(hard)+" hangree="+str(hangree)+" WHERE chat_id=" + str(message.chat.id))
-  db.commit()
+def teleport(message, numOtvet):
+  user_m[message.chat.id]["schena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][numOtvet]["schena"]
+  user_m[message.chat.id]["root_scena"] = textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["root"]
+  user_m[message.chat.id]["pred_schena"] = True
 
-'''
 def teleport_admin(message):
   if int(str(message.text).split("_")[1]) <= len(textMess)-1 and int(str(message.text).split("_")[2]) >= 0 and int(str(message.text).split("_")[1]) <= len(textMess[int(str(message.text).split("_")[1])])-1:
     user_m[message.chat.id]["root_scena"] = int(str(message.text).split("_")[1])
     user_m[message.chat.id]["schena"] = int(str(message.text).split("_")[2])
     user_m[message.chat.id]["pred_schena"] = False
-'''
+
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
   photo = open('logotypea.png', 'rb')
@@ -385,49 +362,41 @@ def send_welcome(message):
   markup = types.ReplyKeyboardMarkup(row_width=1)
   markup.row(types.KeyboardButton("1. открыть дверь"))
   bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
-  db_new_row(message.chat.id, message.chat.username)
+  user_m[message.chat.id] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0, "pred_schena": True}
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-  cursor = db.cursor()
-  cursor.execute("SELECT * FROM Users WHERE chat_id="+str(message.chat.id))
-  results = cursor.fetchall()
-
-  if len(results) != 0:
-    hard = 0
-    hangree = 0
-    if results[0][4] == 1:
-      hard = textMess[results[0][2]][results[0][3]]["Hard"]+results[0][7]
-      hangree = textMess[results[0][2]][results[0][3]]["hangre"]+results[0][8]
+  if user_m.get(message.chat.id) != None:
+    if user_m[message.chat.id]["pred_schena"]:
+      user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
+      user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
 
     if str(message.text).split(".")[0] == "1":
-      teleport(message, 0, hard, hangree)
-    elif str(message.text).split(".")[0] == "2" and  len(textMess[results[0][2]][results[0][3]]["otvet"]) >= 2:
-      teleport(message, 1, hard, hangree)
-    elif str(message.text).split(".")[0] == "3" and  len(textMess[results[0][2]][results[0][3]]["otvet"]) >= 3:
-      teleport(message, 2, hard, hangree)
-    elif str(message.text).split(".")[0] == "4" and  len(textMess[results[0][2]][results[0][3]]["otvet"]) >= 4:
-      teleport(message, 3, hard, hangree)
-    elif str(message.text).split(".")[0] == "5" and  len(textMess[results[0][2]][results[0][3]]["otvet"]) >= 5:
-      teleport(message, 4, hard, hangree)
+      teleport(message, 0)
+    elif str(message.text).split(".")[0] == "2" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 2:
+      teleport(message, 1)
+    elif str(message.text).split(".")[0] == "3" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 3:
+      teleport(message, 2)
+    elif str(message.text).split(".")[0] == "4" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 4:
+      teleport(message, 3)
+    elif str(message.text).split(".")[0] == "5" and  len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]) >= 5:
+      teleport(message, 4)
     elif str(message.text).split(".")[0] == "9":
       condition(message)
-    #elif str(message.text).split("_")[0] == "/teleportAadmin":
-    #  teleport_admin(message)
+    elif str(message.text).split("_")[0] == "/teleportAadmin":
+      teleport_admin(message)
     else:
       bot.send_message(message.chat.id, "error")
-      cursor2 = db.cursor()
-      cursor2.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
-      db.commit()
+      user_m[message.chat.id]["pred_schena"] = False
 
 
 
-    markup = types.ReplyKeyboardMarkup(row_width=len(textMess[results[0][2]][results[0][3]]["otvet"]))
+    markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
 
-    for otvet in range(0, len(textMess[results[0][2]][results[0][3]]["otvet"])):
-        markup.row(types.KeyboardButton(str(otvet + 1) + ". " +textMess[results[0][2]][results[0][3]]["otvet"][otvet]["text"]))
+    for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
+        markup.row(types.KeyboardButton(str(otvet + 1) + ". " +textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"][otvet]["text"]))
     markup.row(types.KeyboardButton("9. моё состояние"))
-    bot.send_message(message.chat.id, textMess[results[0][2]][results[0][3]]["text"], reply_markup=markup)
+    bot.send_message(message.chat.id, textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["text"], reply_markup=markup)
   else:
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 

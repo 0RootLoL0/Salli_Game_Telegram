@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat.sqlite" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,17 +19,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-75">
-              <caret line="344" column="44" selection-start-line="344" selection-start-column="44" selection-end-line="344" selection-end-column="44" />
+            <state relative-caret-position="330">
+              <caret line="343" column="34" selection-start-line="343" selection-start-column="34" selection-end-line="343" selection-end-column="34" />
               <folding>
-                <element signature="e#42#94#0" />
-                <element signature="e#706#7919#0" />
-                <element signature="e#7949#8105#0" />
-                <element signature="e#8507#8939#0" />
-                <element signature="e#9310#9761#1" />
-                <element signature="e#10438#10583#0" />
-                <element signature="e#11522#11581#0" />
-                <element signature="e#11652#11808#0" />
+                <element signature="e#704#7915#0" />
+                <element signature="e#706#3331#0" />
+                <element signature="e#708#1101#0" />
+                <element signature="e#1103#1300#0" />
+                <element signature="e#1302#1439#0" />
+                <element signature="e#1442#1738#0" />
+                <element signature="e#1740#1923#0" />
+                <element signature="e#1925#2170#0" />
+                <element signature="e#2173#2330#0" />
+                <element signature="e#2332#2495#0" />
+                <element signature="e#2497#2741#0" />
+                <element signature="e#2744#2906#0" />
+                <element signature="e#2908#3019#0" />
+                <element signature="e#3021#3133#0" />
+                <element signature="e#3136#3329#0" />
               </folding>
             </state>
           </provider>
@@ -58,7 +65,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
     <option name="y" value="25" />
     <option name="width" value="960" />
     <option name="height" value="1055" />
@@ -69,7 +75,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -81,6 +86,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545066508023</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="test">
+      <created>1545068866278</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1545068866278</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -458,7 +471,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.46524063" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.4641711" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32834226" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -518,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="совсем чучуть" />
     <MESSAGE value="совсем чучучуть" />
     <MESSAGE value="salli перенос бота добавление состояния" />
     <MESSAGE value="оброботчик ошибок" />
@@ -543,7 +555,8 @@
     <MESSAGE value="fix db" />
     <MESSAGE value="fix 2 db" />
     <MESSAGE value="fix 3 db" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 3 db" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,19 +606,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.6/site-packages/telebot/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="578" column="8" selection-start-line="578" selection-start-column="8" selection-end-line="578" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="344" column="44" selection-start-line="344" selection-start-column="44" selection-end-line="344" selection-end-column="44" />
+        <state relative-caret-position="330">
+          <caret line="343" column="34" selection-start-line="343" selection-start-column="34" selection-end-line="343" selection-end-column="34" />
           <folding>
-            <element signature="e#42#94#0" />
-            <element signature="e#706#7919#0" />
-            <element signature="e#7949#8105#0" />
-            <element signature="e#8507#8939#0" />
-            <element signature="e#9310#9761#1" />
-            <element signature="e#10438#10583#0" />
-            <element signature="e#11522#11581#0" />
-            <element signature="e#11652#11808#0" />
+            <element signature="e#704#7915#0" />
+            <element signature="e#706#3331#0" />
+            <element signature="e#708#1101#0" />
+            <element signature="e#1103#1300#0" />
+            <element signature="e#1302#1439#0" />
+            <element signature="e#1442#1738#0" />
+            <element signature="e#1740#1923#0" />
+            <element signature="e#1925#2170#0" />
+            <element signature="e#2173#2330#0" />
+            <element signature="e#2332#2495#0" />
+            <element signature="e#2497#2741#0" />
+            <element signature="e#2744#2906#0" />
+            <element signature="e#2908#3019#0" />
+            <element signature="e#3021#3133#0" />
+            <element signature="e#3136#3329#0" />
           </folding>
         </state>
       </provider>
