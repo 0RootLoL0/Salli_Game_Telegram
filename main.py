@@ -15,8 +15,9 @@ with open('continuity.json') as f:
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-
 user_m = {}
+with open('user.json') as f:
+  user_m = json.load(f)
 
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
@@ -74,7 +75,8 @@ def echo_all(message):
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
 
-
+    with open('user.json', 'w') as outfile:
+      json.dump(user_m, outfile)
 
     markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
 
