@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,17 +19,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="338" selection-start-line="338" selection-end-line="338" />
+            <state relative-caret-position="-75">
+              <caret line="344" column="44" selection-start-line="344" selection-start-column="44" selection-end-line="344" selection-end-column="44" />
               <folding>
                 <element signature="e#42#94#0" />
                 <element signature="e#706#7919#0" />
                 <element signature="e#7949#8105#0" />
-                <element signature="e#8205#8485#0" />
                 <element signature="e#8507#8939#0" />
                 <element signature="e#9310#9761#1" />
-                <element signature="e#10338#12389#0" />
-                <element signature="e#10468#12288#0" />
                 <element signature="e#10438#10583#0" />
                 <element signature="e#11522#11581#0" />
                 <element signature="e#11652#11808#0" />
@@ -86,7 +84,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DB_Game_Telegram" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -421,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545065823091</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fix 2 db">
+      <created>1545066127869</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1545066127869</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix 3 db">
+      <created>1545066508023</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1545066508023</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -435,9 +447,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.12756985" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.12756985" />
       <window_info id="Structure" order="1" sideWeight="0.5005348" side_tool="true" weight="0.24986821" />
       <window_info id="Favorites" order="2" sideWeight="0.5005348" side_tool="true" weight="0.24986821" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,7 +458,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.46524063" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.46524063" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32834226" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -507,8 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="вроде всё должно работать" />
-    <MESSAGE value="создаём оформление" />
     <MESSAGE value="совсем чучуть" />
     <MESSAGE value="совсем чучучуть" />
     <MESSAGE value="salli перенос бота добавление состояния" />
@@ -532,7 +541,9 @@
     <MESSAGE value="refactor command" />
     <MESSAGE value="include db" />
     <MESSAGE value="fix db" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix db" />
+    <MESSAGE value="fix 2 db" />
+    <MESSAGE value="fix 3 db" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 3 db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,17 +595,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="338" selection-start-line="338" selection-end-line="338" />
+        <state relative-caret-position="-75">
+          <caret line="344" column="44" selection-start-line="344" selection-start-column="44" selection-end-line="344" selection-end-column="44" />
           <folding>
             <element signature="e#42#94#0" />
             <element signature="e#706#7919#0" />
             <element signature="e#7949#8105#0" />
-            <element signature="e#8205#8485#0" />
             <element signature="e#8507#8939#0" />
             <element signature="e#9310#9761#1" />
-            <element signature="e#10338#12389#0" />
-            <element signature="e#10468#12288#0" />
             <element signature="e#10438#10583#0" />
             <element signature="e#11522#11581#0" />
             <element signature="e#11652#11808#0" />

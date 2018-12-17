@@ -14,7 +14,6 @@ from telebot import types
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 db = sqlite3.connect('chat.sqlite')
-cursor = db.cursor()
 # TODO вынести всё в отдельный файл
 textMess = [
 [
@@ -337,23 +336,37 @@ textMess = [
 ]
 
 def db_new_row(id, username):
+  cursor = db.cursor()
   cursor.execute("INSERT INTO Users ('chat_id','Username','data') VALUES ("+str(id)+", '"+username+"', '"+str(datetime.datetime.now())+"')")
   db.commit()
 
+@bot.message_handler(commands=['statistics_0rootlol0'])
+def statistics_0rootlol0(message):
+  cursor = db.cursor()
+  cursor.execute("SELECT COUNT(*) FROM Users")
+  results = cursor.fetchall()
+  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(results[0][0]))
+  cursor2 = db.cursor()
+  cursor2.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
+  db.commit()
+
 def condition(message):
+  cursor = db.cursor()
   cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id="+message.chat.id)
   results = cursor.fetchall()
   bot.send_message(message.chat.id, "Ед.жизни:  " + str(results[0][0]) +
                                   "\nЕд.голода: " + str(results[0][1]))
-
-  cursor.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
+  cursor2 = db.cursor()
+  cursor2.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
   db.commit()
 
 def teleport(message, numOtvet, hard, hangree):
+  cursor = db.cursor()
   cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id=" + str(message.chat.id))
   results = cursor.fetchall()
   schena = textMess[results[0][0]][results[0][1]]["otvet"][numOtvet]["schena"]
   root_schena = textMess[results[0][0]][results[0][0]]["root"]
+  cursor2 = db.cursor()
   cursor.execute("UPDATE Users SET schena_n_loop=1 schena="+str(schena)+" root="+str(root_schena)+" hard="+str(hard)+" hangree="+str(hangree)+" WHERE chat_id=" + str(message.chat.id))
   db.commit()
 
@@ -376,6 +389,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
+  cursor = db.cursor()
   cursor.execute("SELECT * FROM Users WHERE chat_id="+str(message.chat.id))
   results = cursor.fetchall()
 
@@ -402,7 +416,8 @@ def echo_all(message):
     #  teleport_admin(message)
     else:
       bot.send_message(message.chat.id, "error")
-      cursor.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
+      cursor2 = db.cursor()
+      cursor2.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
       db.commit()
 
 
