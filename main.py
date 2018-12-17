@@ -384,7 +384,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-  cursor.execute("SELECT * FROM Users WHERE chat_id="+message.chat.id)
+  cursor.execute("SELECT * FROM Users WHERE chat_id="+str(message.chat.id))
   results = cursor.fetchall()
 
   if len(results) != 0:

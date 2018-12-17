@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="385" column="22" selection-start-line="385" selection-start-column="22" selection-end-line="385" selection-end-column="22" />
+            <state relative-caret-position="135">
+              <caret line="338" selection-start-line="338" selection-end-line="338" />
               <folding>
                 <element signature="e#42#94#0" />
                 <element signature="e#706#7919#0" />
@@ -28,7 +27,6 @@
                 <element signature="e#8205#8485#0" />
                 <element signature="e#8507#8939#0" />
                 <element signature="e#9310#9761#1" />
-                <element signature="e#9489#9860#0" />
                 <element signature="e#10338#12389#0" />
                 <element signature="e#10468#12288#0" />
                 <element signature="e#10438#10583#0" />
@@ -409,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544993059832</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="include db">
+      <created>1545065331463</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1545065331464</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix db">
+      <created>1545065823091</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1545065823091</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -425,12 +437,12 @@
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.12756985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.12756985" />
       <window_info id="Structure" order="1" sideWeight="0.5005348" side_tool="true" weight="0.24986821" />
       <window_info id="Favorites" order="2" sideWeight="0.5005348" side_tool="true" weight="0.24986821" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49973643" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49973643" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -495,8 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="16" />
-    <MESSAGE value="17" />
     <MESSAGE value="вроде всё должно работать" />
     <MESSAGE value="создаём оформление" />
     <MESSAGE value="совсем чучуть" />
@@ -520,7 +530,9 @@
     <MESSAGE value="fix continuity add command" />
     <MESSAGE value="fix command" />
     <MESSAGE value="refactor command" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor command" />
+    <MESSAGE value="include db" />
+    <MESSAGE value="fix db" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -572,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="385" column="22" selection-start-line="385" selection-start-column="22" selection-end-line="385" selection-end-column="22" />
+        <state relative-caret-position="135">
+          <caret line="338" selection-start-line="338" selection-end-line="338" />
           <folding>
             <element signature="e#42#94#0" />
             <element signature="e#706#7919#0" />
@@ -581,7 +593,6 @@
             <element signature="e#8205#8485#0" />
             <element signature="e#8507#8939#0" />
             <element signature="e#9310#9761#1" />
-            <element signature="e#9489#9860#0" />
             <element signature="e#10338#12389#0" />
             <element signature="e#10468#12288#0" />
             <element signature="e#10438#10583#0" />
