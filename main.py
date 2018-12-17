@@ -340,14 +340,6 @@ def db_new_row(id, username):
   cursor.execute("INSERT INTO Users ('chat_id','Username','data') VALUES ("+str(id)+", '"+username+"', '"+str(datetime.datetime.now())+"')")
   db.commit()
 
-@bot.message_handler(commands=['statistics_0rootlol0'])
-def statistics_0rootlol0(message):
-  cursor.execute("SELECT COUNT(*) FROM Users;")
-  results = cursor.fetchall()
-  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(results[0][0]))
-  cursor.execute("UPDATE Users SET schena_n_loop=0  WHERE chat_id=" + str(message.chat.id))
-  db.commit()
-
 def condition(message):
   cursor.execute("SELECT hard,hangree FROM Users WHERE chat_id="+message.chat.id)
   results = cursor.fetchall()
