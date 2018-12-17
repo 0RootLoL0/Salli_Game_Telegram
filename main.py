@@ -15,7 +15,6 @@ with open('continuity.json') as f:
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-user_m = {}
 with open('user.json') as f:
   user_m = json.load(f)
 
