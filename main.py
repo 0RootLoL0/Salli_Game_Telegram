@@ -74,7 +74,7 @@ def echo_all(message):
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
 
-    with open('user.json', 'w') as outfile:
+    with open('user1.json', 'w') as outfile:
       json.dump(user_m, outfile)
 
     markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
