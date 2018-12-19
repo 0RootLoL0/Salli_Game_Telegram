@@ -58,7 +58,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-  if user_m.get(message.chat.id) != None:
+  if user_m.get(int(message.chat.id)) != None:
     if user_m[message.chat.id]["pred_schena"]:
       user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
       user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
