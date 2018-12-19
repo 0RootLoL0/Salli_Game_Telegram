@@ -15,6 +15,7 @@ from telebot import types
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
 f.close()
+user_m = {}
 with open('sourse/users.json') as f:
   user_m = json.load(f)
 f.close()
