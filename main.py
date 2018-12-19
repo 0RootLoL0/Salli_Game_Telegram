@@ -15,9 +15,10 @@ from telebot import types
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
 f.close()
-
+with open('sourse/users.json') as f:
+  user_m = json.load(f)
+f.close()
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-user_m = {}
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
@@ -74,7 +75,7 @@ def echo_all(message):
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
 
-    with open('user.json', 'w') as outfile:
+    with open('sourse/users.json', 'w') as outfile:
       json.dump(user_m, outfile)
     outfile.close()
 
