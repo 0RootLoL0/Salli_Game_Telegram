@@ -18,6 +18,7 @@ f.close()
 with open('sourse/users.json') as f:
   user_m = json.load(f)
 f.close()
+print(user_m)
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
@@ -52,6 +53,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
+  print(user_m.get(message.chat.id))
   if user_m.get(message.chat.id) != None:
     if user_m[message.chat.id]["pred_schena"]:
       user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
