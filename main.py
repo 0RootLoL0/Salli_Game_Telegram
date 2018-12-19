@@ -1,11 +1,3 @@
-import telebot
-import json
-from telebot import types
-
-with open('continuity.json') as f:
-  textMess = json.load(f)
-f.close()
-
 #  ":'######:::::'###::::'##:::::::'##:::::::'####:"
 #  ":##... ##:::'## ##::: ##::::::: ##:::::::. ##::"
 #  ":##:::..:::'##:. ##:: ##::::::: ##:::::::: ##::"
@@ -15,6 +7,15 @@ f.close()
 #  ". ######:: ##:::: ##: ########: ########:'####:"
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
+
+import telebot
+import json
+from telebot import types
+
+with open('sourse/continuity_convert_Unicod.json') as f:
+  textMess = json.load(f)
+f.close()
+
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 user_m = {}
 @bot.message_handler(commands=['statistics_0rootlol0'])
@@ -40,7 +41,7 @@ def teleport_admin(message):
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-  photo = open('logotypea.png', 'rb')
+  photo = open('sourse/logotypea.png', 'rb')
   bot.send_photo(message.chat.id, photo)
   bot.send_message(message.chat.id, "добро пожаловать")
   markup = types.ReplyKeyboardMarkup(row_width=1)
