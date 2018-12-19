@@ -14,9 +14,7 @@ from telebot import types
 from threading import Thread
 
 def prescript(user_m):
-  with open('sourse/users.json', 'w') as outfile:
-    json.dump(user_m, outfile)
-  outfile.close()
+
 
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
@@ -58,7 +56,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-  if user_m.get(int(message.chat.id)) != None:
+  if user_m.get(message.chat.id) != None:
     if user_m[message.chat.id]["pred_schena"]:
       user_m[message.chat.id]["hard"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["Hard"]
       user_m[message.chat.id]["hangree"] += textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["hangre"]
@@ -81,6 +79,10 @@ def echo_all(message):
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
 
+    with open('sourse/users.json', 'w') as outfile:
+      json.dump(user_m, outfile)
+    outfile.close()
+
     markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
 
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
@@ -90,8 +92,4 @@ def echo_all(message):
   else:
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 
-
 bot.polling()
-thread1 = Thread(target=prescript, args=(user_m))
-thread1.start()
-thread1.join()
