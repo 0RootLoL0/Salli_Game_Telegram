@@ -19,7 +19,7 @@ user_m = {}
 with open('sourse/users.json') as f:
   user_m = json.load(f)
 f.close()
-print(user_m)
+print(user_m['57657657'])
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
