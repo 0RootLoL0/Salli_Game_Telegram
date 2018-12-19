@@ -74,7 +74,6 @@ def echo_all(message):
     else:
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
-    print(user_m)
     markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
 
     for otvet in range(0, len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"])):
@@ -85,3 +84,4 @@ def echo_all(message):
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 
 bot.polling()
+print(user_m)
