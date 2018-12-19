@@ -84,4 +84,6 @@ def echo_all(message):
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 
 bot.polling()
-print(user_m)
+with open('users.json', 'w') as outfile:
+  json.dump(user_m, outfile)
+outfile.close()
