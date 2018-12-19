@@ -11,6 +11,12 @@
 import telebot
 import json
 from telebot import types
+from threading import Thread
+
+def prescript(user_m):
+  with open('sourse/users.json', 'w') as outfile:
+    json.dump(user_m, outfile)
+  outfile.close()
 
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
@@ -75,9 +81,9 @@ def echo_all(message):
       bot.send_message(message.chat.id, "error")
       user_m[message.chat.id]["pred_schena"] = False
 
-    with open('sourse/users.json', 'w') as outfile:
-      json.dump(user_m, outfile)
-    outfile.close()
+    thread1 = Thread(target=prescript, args=(user_m))
+    thread1.start()
+    thread1.join()
 
     markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[message.chat.id]["root_scena"]][user_m[message.chat.id]["schena"]]["otvet"]))
 
