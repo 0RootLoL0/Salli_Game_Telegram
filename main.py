@@ -77,20 +77,25 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
   if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) == 1:
+    print("if 1 in")
     root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
     if int(schena_p) == 1:
+      print("if 2 in")
       hard += textMess[root][schena]["Hard"]
       hangree += textMess[root][schena]["hangre"]
 
+    print(str(message.text).split(".")[0])
     if str(message.text).split(".")[0] == "1":
+      print(1)
       teleport(message, 0)
-    elif str(message.text).split(".")[0] == "2" and  len(textMess[root][schena]["otvet"]) >= 2:
+    elif str(message.text).split(".")[0] == "2" and len(textMess[root][schena]["otvet"]) >= 2:
+      print(2)
       teleport(message, 1)
-    elif str(message.text).split(".")[0] == "3" and  len(textMess[root][schena]["otvet"]) >= 3:
+    elif str(message.text).split(".")[0] == "3" and len(textMess[root][schena]["otvet"]) >= 3:
       teleport(message, 2)
-    elif str(message.text).split(".")[0] == "4" and  len(textMess[root][schena]["otvet"]) >= 4:
+    elif str(message.text).split(".")[0] == "4" and len(textMess[root][schena]["otvet"]) >= 4:
       teleport(message, 3)
-    elif str(message.text).split(".")[0] == "5" and  len(textMess[root][schena]["otvet"]) >= 5:
+    elif str(message.text).split(".")[0] == "5" and len(textMess[root][schena]["otvet"]) >= 5:
       teleport(message, 4)
     elif str(message.text).split(".")[0] == "9":
       condition(message)
