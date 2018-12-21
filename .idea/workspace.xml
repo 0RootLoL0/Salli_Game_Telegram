@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="" />
+    <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +18,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+            <state relative-caret-position="525">
+              <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#457#471#0" expanded="true" />
                 <element signature="e#570#605#0" />
+                <element signature="e#801#1288#0" />
                 <element signature="e#784#932#0" />
                 <element signature="e#960#1205#0" />
                 <element signature="e#1242#1605#0" />
@@ -184,20 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544730217143</updated>
-    </task>
-    <task id="LOCAL-00019" summary="совсем чучуть">
-      <created>1544892791035</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1544892791036</updated>
-    </task>
-    <task id="LOCAL-00020" summary="совсем чучучуть">
-      <created>1544893689407</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1544893689408</updated>
     </task>
     <task id="LOCAL-00021" summary="salli перенос бота добавление состояния">
       <created>1544894703733</created>
@@ -528,7 +517,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545244450779</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="l4tf4ft">
+      <created>1545358085486</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1545358085488</updated>
+    </task>
+    <task id="LOCAL-00069" summary="l4tf4ftee">
+      <created>1545358221265</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1545358221265</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -544,7 +547,7 @@
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983957" visible="true" weight="0.14602003" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983957" visible="true" weight="0.14602003" />
       <window_info id="Structure" order="1" sideWeight="0.50160426" side_tool="true" weight="0.12756985" />
       <window_info id="Favorites" order="2" sideWeight="0.50160426" side_tool="true" weight="0.12756985" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -555,7 +558,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.4641711" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32799146" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3272727" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -633,8 +636,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add root 1" />
-    <MESSAGE value="root 1 fix" />
     <MESSAGE value="fix continuity add command" />
     <MESSAGE value="fix command" />
     <MESSAGE value="refactor command" />
@@ -658,7 +659,9 @@
     <MESSAGE value="l" />
     <MESSAGE value="l4" />
     <MESSAGE value="l4t" />
-    <option name="LAST_COMMIT_MESSAGE" value="l4t" />
+    <MESSAGE value="l4tf4ft" />
+    <MESSAGE value="l4tf4ftee" />
+    <option name="LAST_COMMIT_MESSAGE" value="l4tf4ftee" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
@@ -739,12 +742,13 @@
     <entry file="file://$PROJECT_DIR$/sql.py" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+        <state relative-caret-position="525">
+          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#457#471#0" expanded="true" />
             <element signature="e#570#605#0" />
+            <element signature="e#801#1288#0" />
             <element signature="e#784#932#0" />
             <element signature="e#960#1205#0" />
             <element signature="e#1242#1605#0" />
