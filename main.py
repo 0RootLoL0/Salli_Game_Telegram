@@ -17,8 +17,6 @@ with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
   f.close()
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-global root, schena, schena_p, hard, hangree
-www = False
 def db_use(type_rec, rec_w):
   def execute(queue, result_n, rec):
     proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
@@ -48,11 +46,10 @@ def condition(message):
                                   "\nЕд.голода: " + str(hangree))
   print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
 
-def teleport(message, numOtvet):
-  root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
+def teleport(id, root, schena, numOtvet):
   schena_r = textMess[root][schena]["otvet"][numOtvet]["schena"]
-  root_scena = textMess[root][schena_r]["root"]
-  print(db_use(0, "UPDATE users SET root=" + str(root_scena) + ", schena=" + str(schena_r) + ", schena_p=1 WHERE id=" + str(message.chat.id)))
+  root_scena = textMess[root][schena]["root"]
+  print(db_use(0, "UPDATE users SET root=" + str(root_scena) + ", schena=" + str(schena_r) + ", schena_p=1 WHERE id=" + str(id)))
 
 def teleport_admin(message):
   if int(str(message.text).split("_")[1]) <= len(textMess)-1 and int(str(message.text).split("_")[2]) >= 0 and int(str(message.text).split("_")[1]) <= len(textMess[int(str(message.text).split("_")[1])])-1:
@@ -65,11 +62,12 @@ def teleport_admin(message):
 def send_welcome(message):
   photo = open('sourse/logotypea.png', 'rb')
   bot.send_photo(message.chat.id, photo)
-  www = True
+  print("send photo")
   if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0]) != 1:
     print(db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+",'"+str(message.chat.username)+"')"))
   else:
     db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id="+str(message.chat.id))
+
   echo_all(message)
 
 
@@ -85,15 +83,15 @@ def echo_all(message):
 
     print(str(message.text).split(".")[0])
     if str(message.text).split(".")[0] == "1":
-      teleport(message, 0)
+      teleport(message.chat.id, root, schena, 0)
     elif str(message.text).split(".")[0] == "2" and len(textMess[root][schena]["otvet"]) >= 2:
-      teleport(message, 1)
+      teleport(message.chat.id, root, schena, 1)
     elif str(message.text).split(".")[0] == "3" and len(textMess[root][schena]["otvet"]) >= 3:
-      teleport(message, 2)
+      teleport(message.chat.id, root, schena, 2)
     elif str(message.text).split(".")[0] == "4" and len(textMess[root][schena]["otvet"]) >= 4:
-      teleport(message, 3)
+      teleport(message.chat.id, root, schena, 3)
     elif str(message.text).split(".")[0] == "5" and len(textMess[root][schena]["otvet"]) >= 5:
-      teleport(message, 4)
+      teleport(message.chat.id, root, schena, 4)
     elif str(message.text).split(".")[0] == "9":
       condition(message)
     elif str(message.text).split("_")[0] == "/teleportAadmin":

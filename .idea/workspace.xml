@@ -19,16 +19,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+            <state relative-caret-position="612">
+              <caret line="100" column="18" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#457#471#0" expanded="true" />
-                <element signature="e#570#605#0" />
-                <element signature="e#801#1288#0" />
-                <element signature="e#1380#1612#0" />
-                <element signature="e#1559#1807#0" />
-                <element signature="e#2234#2713#0" />
+                <element signature="e#2466#2946#0" />
+                <element signature="e#3018#3482#0" />
               </folding>
             </state>
           </provider>
@@ -193,20 +190,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544730217143</updated>
-    </task>
-    <task id="LOCAL-00036" summary="root 1 fix">
-      <created>1544989882311</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1544989882311</updated>
-    </task>
-    <task id="LOCAL-00037" summary="fix continuity add command">
-      <created>1544990962904</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1544990962904</updated>
     </task>
     <task id="LOCAL-00038" summary="fix command">
       <created>1544991192390</created>
@@ -537,7 +520,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545365300420</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="db include fix 8">
+      <created>1545365495195</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1545365495195</updated>
+    </task>
+    <task id="LOCAL-00086" summary="db include fix 8">
+      <created>1545365604313</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1545365604313</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -642,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="save" />
     <MESSAGE value="save 2" />
     <MESSAGE value="save fix 3" />
     <MESSAGE value="save fix 4" />
@@ -667,7 +663,8 @@
     <MESSAGE value="db include fix 5" />
     <MESSAGE value="db include fix 6" />
     <MESSAGE value="db include fix 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="db include fix 7" />
+    <MESSAGE value="db include fix 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="db include fix 8" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
@@ -724,13 +721,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourse/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sourse/users.json" />
     <entry file="file://$PROJECT_DIR$/gen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -750,16 +741,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+        <state relative-caret-position="612">
+          <caret line="100" column="18" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#457#471#0" expanded="true" />
-            <element signature="e#570#605#0" />
-            <element signature="e#801#1288#0" />
-            <element signature="e#1380#1612#0" />
-            <element signature="e#1559#1807#0" />
-            <element signature="e#2234#2713#0" />
+            <element signature="e#2466#2946#0" />
+            <element signature="e#3018#3482#0" />
           </folding>
         </state>
       </provider>
