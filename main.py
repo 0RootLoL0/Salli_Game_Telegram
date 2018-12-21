@@ -85,13 +85,13 @@ def echo_all(message):
 
     if str(message.text).split(".")[0] == "1":
       teleport(message, 0)
-    elif str(message.text).split(".")[0] == "2" and  len(textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"]) >= 2:
+    elif str(message.text).split(".")[0] == "2" and  len(textMess[root][schena]["otvet"]) >= 2:
       teleport(message, 1)
-    elif str(message.text).split(".")[0] == "3" and  len(textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"]) >= 3:
+    elif str(message.text).split(".")[0] == "3" and  len(textMess[root][schena]["otvet"]) >= 3:
       teleport(message, 2)
-    elif str(message.text).split(".")[0] == "4" and  len(textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"]) >= 4:
+    elif str(message.text).split(".")[0] == "4" and  len(textMess[root][schena]["otvet"]) >= 4:
       teleport(message, 3)
-    elif str(message.text).split(".")[0] == "5" and  len(textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"]) >= 5:
+    elif str(message.text).split(".")[0] == "5" and  len(textMess[root][schena]["otvet"]) >= 5:
       teleport(message, 4)
     elif str(message.text).split(".")[0] == "9":
       condition(message)
