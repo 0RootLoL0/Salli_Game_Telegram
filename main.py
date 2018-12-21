@@ -18,6 +18,7 @@ with open('sourse/continuity_convert_Unicod.json') as f:
   f.close()
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 global root, schena, schena_p, hard, hangree
+global www
 def db_use(type_rec, rec_w):
   def execute(queue, result_n, rec):
     proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
@@ -64,19 +65,18 @@ def teleport_admin(message):
 def send_welcome(message):
   photo = open('sourse/logotypea.png', 'rb')
   bot.send_photo(message.chat.id, photo)
-  bot.send_message(message.chat.id, "добро пожаловать")
-  markup = types.ReplyKeyboardMarkup(row_width=1)
-  markup.row(types.KeyboardButton("1. открыть дверь"))
-  bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
+  www = True
   if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0]) != 1:
     print(db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+",'"+str(message.chat.username)+"')"))
   else:
     db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id="+str(message.chat.id))
+  echo_all(message)
 
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-  if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) == 1:
+  if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) == 1 or www:
+    www = False
     print("if 1 in")
     root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
     if int(schena_p) == 1:
@@ -86,10 +86,8 @@ def echo_all(message):
 
     print(str(message.text).split(".")[0])
     if str(message.text).split(".")[0] == "1":
-      print(1)
       teleport(message, 0)
     elif str(message.text).split(".")[0] == "2" and len(textMess[root][schena]["otvet"]) >= 2:
-      print(2)
       teleport(message, 1)
     elif str(message.text).split(".")[0] == "3" and len(textMess[root][schena]["otvet"]) >= 3:
       teleport(message, 2)
