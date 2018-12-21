@@ -48,8 +48,9 @@ def condition(message):
   print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
 
 def teleport(message, numOtvet):
-  schena = textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"][numOtvet]["schena"]
-  root_scena = textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["root"]
+  root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
+  schena = textMess[root][schena]["otvet"][numOtvet]["schena"]
+  root_scena = textMess[root][schena]["root"]
   pred_schena = 1
   print(db_use(0, "UPDATE users SET root=" + str(root_scena) + ", schena=" + str(schena) + ", schena_p=" + str(pred_schena) + ", WHERE id=" + str(message.chat.id)))
 
