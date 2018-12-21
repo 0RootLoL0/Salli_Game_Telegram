@@ -65,7 +65,7 @@ def send_welcome(message):
   markup.row(types.KeyboardButton("1. открыть дверь"))
   bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
   user_m[int(message.chat.id)] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0, "pred_schena": True}
-  if db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0] != 1:
+  if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0]) != 1:
     db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+","+str(message.chat.username)+")")
   else:
     db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id=11")
