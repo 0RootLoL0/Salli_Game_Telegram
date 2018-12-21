@@ -70,12 +70,12 @@ def send_welcome(message):
     print(db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+",'"+str(message.chat.username)+"')"))
   else:
     db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id="+str(message.chat.id))
-  echo_all(message, True)
+  echo_all(message)
 
 
 @bot.message_handler(func=lambda message: True)
-def echo_all(message, www):
-  if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) == 1 or www:
+def echo_all(message):
+  if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) == 1:
     print("if 1 in")
     root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
     if int(schena_p) == 1:
