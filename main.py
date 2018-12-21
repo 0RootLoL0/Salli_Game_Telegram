@@ -18,7 +18,7 @@ with open('sourse/continuity_convert_Unicod.json') as f:
   f.close()
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
 global root, schena, schena_p, hard, hangree
-global www
+www = False
 def db_use(type_rec, rec_w):
   def execute(queue, result_n, rec):
     proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
@@ -70,13 +70,12 @@ def send_welcome(message):
     print(db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+",'"+str(message.chat.username)+"')"))
   else:
     db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id="+str(message.chat.id))
-  echo_all(message)
+  echo_all(message, True)
 
 
 @bot.message_handler(func=lambda message: True)
-def echo_all(message):
+def echo_all(message, www):
   if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) == 1 or www:
-    www = False
     print("if 1 in")
     root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
     if int(schena_p) == 1:
