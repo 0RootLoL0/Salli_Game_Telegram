@@ -11,16 +11,34 @@
 import telebot
 import json
 from telebot import types
+from subprocess import Popen, PIPE
+from multiprocessing import Process, Queue
 
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
-f.close()
+  f.close()
+
 user_m = {}
-with open('sourse/users.json') as f:
-  user_m = json.load(f)
-f.close()
-print(user_m['57657657'])
+
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
+
+def db_use(type_rec, rec_w):
+  def execute(queue, result_n, rec):
+    proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
+    proc.wait()  # дождаться выполнения
+    queue.put(proc.communicate()[0])  ## получить то, что вернул подпроцесс
+
+  queue = Queue()
+  p = Process(target=execute, args=(queue, type_rec, rec_w))
+  p.start()
+  p.join()
+  if type_rec == 0:
+    return int(queue.get().decode("utf-8")) == 200
+  else:
+    return json.loads(queue.get().decode('utf-8'))
+
+
+
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
@@ -51,6 +69,7 @@ def send_welcome(message):
   markup.row(types.KeyboardButton("1. открыть дверь"))
   bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
   user_m[int(message.chat.id)] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0, "pred_schena": True}
+  print(db_use(0, "UPDATE 'main'.'users' SET 'schena_p'=0 WHERE id = 11"))
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
@@ -87,6 +106,3 @@ def echo_all(message):
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 
 bot.polling()
-with open('sourse/users.json', 'w') as outfile:
-  json.dump(user_m, outfile)
-outfile.close()
