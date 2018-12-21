@@ -13,15 +13,11 @@ import json
 from telebot import types
 from subprocess import Popen, PIPE
 from multiprocessing import Process, Queue
-
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
   f.close()
-
-user_m = {}
-
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-
+user_m = {}
 def db_use(type_rec, rec_w):
   def execute(queue, result_n, rec):
     proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
@@ -69,7 +65,11 @@ def send_welcome(message):
   markup.row(types.KeyboardButton("1. открыть дверь"))
   bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
   user_m[int(message.chat.id)] = {"nickname": message.chat.username, "hard": 10, "hangree": 10,"root_scena": 0, "schena": 0, "pred_schena": True}
-  print(db_use(0, "UPDATE 'main'.'users' SET 'schena_p'="+str(message.chat.id)+" WHERE id = 11"))
+  if db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0] != 1:
+    db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+","+message.chat.username+")")
+  else:
+    db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id=11")
+
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
