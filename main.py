@@ -37,24 +37,28 @@ def db_use(type_rec, rec_w):
 
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
-  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(len(user_m)))
-  user_m[int(message.chat.id)]["pred_schena"] = False
+  user_len = db_use(1, "SELECT count(*) FROM users")[0][0]
+  bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(user_len))
+  print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
 
 def condition(message):
-  bot.send_message(message.chat.id, "Ед.жизни:  " + str(user_m[int(message.chat.id)]["hard"]) +
-                                  "\nЕд.голода: " + str(user_m[int(message.chat.id)]["hangree"]))
-  user_m[int(message.chat.id)]["pred_schena"] = False
+  hard, hangree = db_use(1, "SELECT hard, hangree FROM users WHERE id="+str(message.chat.id))[0]
+  bot.send_message(message.chat.id, "Ед.жизни:  " + str(hard) +
+                                  "\nЕд.голода: " + str(hangree))
+  print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
 
 def teleport(message, numOtvet):
-  user_m[int(message.chat.id)]["schena"] = textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"][numOtvet]["schena"]
-  user_m[int(message.chat.id)]["root_scena"] = textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["root"]
-  user_m[int(message.chat.id)]["pred_schena"] = True
+  schena = textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"][numOtvet]["schena"]
+  root_scena = textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["root"]
+  pred_schena = 1
+  print(db_use(0, "UPDATE users SET root=" + str(root_scena) + ", schena=" + str(schena) + ", schena_p=" + str(pred_schena) + ", WHERE id=" + str(message.chat.id)))
 
 def teleport_admin(message):
   if int(str(message.text).split("_")[1]) <= len(textMess)-1 and int(str(message.text).split("_")[2]) >= 0 and int(str(message.text).split("_")[1]) <= len(textMess[int(str(message.text).split("_")[1])])-1:
-    user_m[int(message.chat.id)]["root_scena"] = int(str(message.text).split("_")[1])
-    user_m[int(message.chat.id)]["schena"] = int(str(message.text).split("_")[2])
-    user_m[int(message.chat.id)]["pred_schena"] = False
+    root_scena = int(str(message.text).split("_")[1])
+    schena = int(str(message.text).split("_")[2])
+    pred_schena = 0
+    print(db_use(0, "UPDATE users SET root="+str(root_scena)+", schena="+str(schena)+", schena_p="+str(pred_schena)+", WHERE id="+str(message.chat.id)))
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -68,16 +72,16 @@ def send_welcome(message):
   if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0]) != 1:
     print(db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+",'"+str(message.chat.username)+"')"))
   else:
-    db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id=11")
+    db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id="+str(message.chat.id))
 
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-  print(user_m.get(748681241))
-  if user_m.get(int(message.chat.id)) != None:
-    if user_m[int(message.chat.id)]["pred_schena"]:
-      user_m[int(message.chat.id)]["hard"] += textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["Hard"]
-      user_m[int(message.chat.id)]["hangree"] += textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["hangre"]
+  if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id=" + str(message.chat.id))[0][0]) != 1:
+    root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
+    if int(schena_p) == 1:
+      hard += textMess[root][schena]["Hard"]
+      hangree += textMess[root][schena]["hangre"]
 
     if str(message.text).split(".")[0] == "1":
       teleport(message, 0)
@@ -95,13 +99,14 @@ def echo_all(message):
       teleport_admin(message)
     else:
       bot.send_message(message.chat.id, "error")
-      user_m[int(message.chat.id)]["pred_schena"] = False
-    markup = types.ReplyKeyboardMarkup(row_width=len(textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"]))
+      schena_p = 0
+    markup = types.ReplyKeyboardMarkup(row_width=len(textMess[root][schena]["otvet"]))
 
-    for otvet in range(0, len(textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"])):
-        markup.row(types.KeyboardButton(str(otvet + 1) + ". " +textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["otvet"][otvet]["text"]))
+    for otvet in range(0, len(textMess[root][schena]["otvet"])):
+        markup.row(types.KeyboardButton(str(otvet + 1) + ". " +textMess[root][schena]["otvet"][otvet]["text"]))
     markup.row(types.KeyboardButton("9. моё состояние"))
-    bot.send_message(message.chat.id, textMess[user_m[int(message.chat.id)]["root_scena"]][user_m[int(message.chat.id)]["schena"]]["text"], reply_markup=markup)
+    bot.send_message(message.chat.id, textMess[root][schena]["text"], reply_markup=markup)
+    db_use(0, "UPDATE users SET schena_p="+str(schena_p)+", hard="+str(hard)+", hangree="+str(hangree)+" WHERE id=" + str(message.chat.id))
   else:
     bot.send_message(message.chat.id, "вы не зарегистриваны для регистрации команда /start")
 

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/chat.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,21 +20,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+            <state relative-caret-position="81">
+              <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#457#471#0" expanded="true" />
                 <element signature="e#570#605#0" />
                 <element signature="e#801#1288#0" />
-                <element signature="e#784#932#0" />
-                <element signature="e#960#1205#0" />
-                <element signature="e#1242#1605#0" />
-                <element signature="e#1638#2065#0" />
-                <element signature="e#2683#5034#0" />
+                <element signature="e#1380#1612#0" />
+                <element signature="e#1559#1807#0" />
+                <element signature="e#1838#2272#0" />
+                <element signature="e#2234#2713#0" />
+                <element signature="e#2733#3536#0" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -187,27 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544730217143</updated>
-    </task>
-    <task id="LOCAL-00023" summary="дописал message.chat.id">
-      <created>1544895426563</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1544895426563</updated>
-    </task>
-    <task id="LOCAL-00024" summary="больше не нужно">
-      <created>1544896302386</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1544896302386</updated>
-    </task>
-    <task id="LOCAL-00025" summary="кнопки">
-      <created>1544897832698</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1544897832698</updated>
     </task>
     <task id="LOCAL-00026" summary="дебаг">
       <created>1544898140921</created>
@@ -531,7 +517,28 @@
       <option name="project" value="LOCAL" />
       <updated>1545359561010</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="fix">
+      <created>1545359950855</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1545359950856</updated>
+    </task>
+    <task id="LOCAL-00073" summary="fixt">
+      <created>1545360000651</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1545360000652</updated>
+    </task>
+    <task id="LOCAL-00074" summary="s">
+      <created>1545360233336</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1545360233336</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -636,8 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix continuity add command" />
-    <MESSAGE value="fix command" />
     <MESSAGE value="refactor command" />
     <MESSAGE value="fix db" />
     <MESSAGE value="fix 2 db" />
@@ -652,7 +657,6 @@
     <MESSAGE value="save fix 5" />
     <MESSAGE value="test" />
     <MESSAGE value="test 2" />
-    <MESSAGE value="fix" />
     <MESSAGE value="dd" />
     <MESSAGE value="l" />
     <MESSAGE value="l4" />
@@ -661,7 +665,10 @@
     <MESSAGE value="l4tf4ftee" />
     <MESSAGE value="include db" />
     <MESSAGE value="w" />
-    <option name="LAST_COMMIT_MESSAGE" value="w" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="fixt" />
+    <MESSAGE value="s" />
+    <option name="LAST_COMMIT_MESSAGE" value="s" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
@@ -739,21 +746,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql.py" />
+    <entry file="file://$PROJECT_DIR$/sql.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        <state relative-caret-position="81">
+          <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#457#471#0" expanded="true" />
             <element signature="e#570#605#0" />
             <element signature="e#801#1288#0" />
-            <element signature="e#784#932#0" />
-            <element signature="e#960#1205#0" />
-            <element signature="e#1242#1605#0" />
-            <element signature="e#1638#2065#0" />
-            <element signature="e#2683#5034#0" />
+            <element signature="e#1380#1612#0" />
+            <element signature="e#1559#1807#0" />
+            <element signature="e#1838#2272#0" />
+            <element signature="e#2234#2713#0" />
+            <element signature="e#2733#3536#0" />
           </folding>
         </state>
       </provider>
