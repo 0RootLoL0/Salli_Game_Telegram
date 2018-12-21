@@ -33,13 +33,13 @@ def db_use(type_rec, rec_w):
     return json.loads(queue.get().decode('utf-8'))
 
 
-
+# сделан
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
   user_len = db_use(1, "SELECT count(*) FROM users")[0][0]
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(user_len))
   print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
-
+# сделан
 def condition(message):
   hard, hangree = db_use(1, "SELECT hard, hangree FROM users WHERE id="+str(message.chat.id))[0]
   bot.send_message(message.chat.id, "Ед.жизни:  " + str(hard) +
@@ -50,25 +50,20 @@ def teleport(id, root, schena, numOtvet):
   schena_r = textMess[root][schena]["otvet"][numOtvet]["schena"]
   root_scena = textMess[root][schena]["root"]
   print(db_use(0, "UPDATE users SET root=" + str(root_scena) + ", schena=" + str(schena_r) + ", schena_p=1 WHERE id=" + str(id)))
-
-def teleport_admin(message):
-  if int(str(message.text).split("_")[1]) <= len(textMess)-1 and int(str(message.text).split("_")[2]) >= 0 and int(str(message.text).split("_")[1]) <= len(textMess[int(str(message.text).split("_")[1])])-1:
-    root_scena = int(str(message.text).split("_")[1])
-    schena = int(str(message.text).split("_")[2])
-    pred_schena = 0
-    print(db_use(0, "UPDATE users SET root="+str(root_scena)+", schena="+str(schena)+", schena_p="+str(pred_schena)+", WHERE id="+str(message.chat.id)))
+  return schena_r, root_scena
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
   photo = open('sourse/logotypea.png', 'rb')
   bot.send_photo(message.chat.id, photo)
-  print("send photo")
+  bot.send_message(message.chat.id, "добро пожаловать")
+  markup = types.ReplyKeyboardMarkup(row_width=1)
+  markup.row(types.KeyboardButton("1. открыть дверь"))
+  bot.send_message(message.chat.id, textMess[0][0]["text"], reply_markup=markup)
   if int(db_use(1, "SELECT COUNT(*) FROM users WHERE id="+str(message.chat.id))[0][0]) != 1:
     print(db_use(0, "INSERT INTO 'main'.'users'('id','login') VALUES ("+str(message.chat.id)+",'"+str(message.chat.username)+"')"))
   else:
     db_use(0, "UPDATE users SET root=0, schena=0, schena_p=1, hard=10, hangree=10 WHERE id="+str(message.chat.id))
-
-  echo_all(message)
 
 
 @bot.message_handler(func=lambda message: True)
@@ -83,19 +78,17 @@ def echo_all(message):
 
     print(str(message.text).split(".")[0])
     if str(message.text).split(".")[0] == "1":
-      teleport(message.chat.id, root, schena, 0)
+      schena, root = teleport(message.chat.id, root, schena, 0)
     elif str(message.text).split(".")[0] == "2" and len(textMess[root][schena]["otvet"]) >= 2:
-      teleport(message.chat.id, root, schena, 1)
+      schena, root = teleport(message.chat.id, root, schena, 1)
     elif str(message.text).split(".")[0] == "3" and len(textMess[root][schena]["otvet"]) >= 3:
-      teleport(message.chat.id, root, schena, 2)
+      schena, root = teleport(message.chat.id, root, schena, 2)
     elif str(message.text).split(".")[0] == "4" and len(textMess[root][schena]["otvet"]) >= 4:
-      teleport(message.chat.id, root, schena, 3)
+      schena, root = teleport(message.chat.id, root, schena, 3)
     elif str(message.text).split(".")[0] == "5" and len(textMess[root][schena]["otvet"]) >= 5:
-      teleport(message.chat.id, root, schena, 4)
+      schena, root = teleport(message.chat.id, root, schena, 4)
     elif str(message.text).split(".")[0] == "9":
       condition(message)
-    elif str(message.text).split("_")[0] == "/teleportAadmin":
-      teleport_admin(message)
     else:
       bot.send_message(message.chat.id, "error")
       schena_p = 0
