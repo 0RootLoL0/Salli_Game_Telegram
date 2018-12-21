@@ -17,7 +17,7 @@ with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
   f.close()
 bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
-user_m = {}
+global root, schena, schena_p, hard, hangree
 def db_use(type_rec, rec_w):
   def execute(queue, result_n, rec):
     proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
