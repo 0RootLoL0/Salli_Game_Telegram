@@ -51,7 +51,7 @@ def condition(message):
 def teleport(message, numOtvet):
   root, schena, schena_p, hard, hangree = db_use(1, "SELECT root, schena, schena_p, hard, hangree FROM users WHERE id =" + str(message.chat.id))[0]
   schena_r = textMess[root][schena]["otvet"][numOtvet]["schena"]
-  root_scena = textMess[root][schena]["root"]
+  root_scena = textMess[root][schena_r]["root"]
   print(db_use(0, "UPDATE users SET root=" + str(root_scena) + ", schena=" + str(schena_r) + ", schena_p=1 WHERE id=" + str(message.chat.id)))
 
 def teleport_admin(message):
