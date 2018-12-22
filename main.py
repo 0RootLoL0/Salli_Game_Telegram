@@ -28,7 +28,7 @@ def db_use(type_rec, rec_w):
   p.start()
   p.join()
   if type_rec == 0:
-    return int(queue.get().decode("utf-8")) == 200
+    return str(queue.get().decode("utf-8")) == ""
   else:
     return json.loads(queue.get().decode('utf-8'))
 
