@@ -38,13 +38,13 @@ def db_use(type_rec, rec_w):
 def statistics_0rootlol0(message):
   user_len = db_use(1, "SELECT count(*) FROM users")[0][0]
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(user_len))
-  print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
+  print(db_use(0, "UPDATE users SET schena_p=0 WHERE id=" + str(message.chat.id)))
 # сделан
 def condition(message):
   hard, hangree = db_use(1, "SELECT hard, hangree FROM users WHERE id="+str(message.chat.id))[0]
   bot.send_message(message.chat.id, "Ед.жизни:  " + str(hard) +
                                   "\nЕд.голода: " + str(hangree))
-  print(db_use(0, "UPDATE users SET schena_p=0, WHERE id=" + str(message.chat.id)))
+  print(db_use(0, "UPDATE users SET schena_p=0 WHERE id=" + str(message.chat.id)))
 
 def teleport(id, root, schena, numOtvet):
   schena_r = textMess[root][schena]["otvet"][numOtvet]["schena"]

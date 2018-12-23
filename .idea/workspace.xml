@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/continuity.json" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/continuity.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/continuity_convert_Unicod.json" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/continuity_convert_Unicod.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,22 +20,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="360">
+              <caret line="32" column="49" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="49" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="n#!!doc" />
+                <element signature="e#457#471#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="782">
+              <caret line="324" column="14" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sourse/continuity_convert_Unicod.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="33" column="428" selection-start-line="33" selection-start-column="428" selection-end-line="33" selection-end-column="428" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,6 +76,9 @@
       <find>user_m[message.chat.id]</find>
       <find>user_m[int(message.chat.id)][&quot;schena&quot;]</find>
       <find>teleport(message.chat.id, root, schena,</find>
+      <find>root</find>
+      <find>root&quot;: 1},</find>
+      <find>root&quot;: 2</find>
     </findStrings>
     <replaceStrings>
       <replace>user_m[int(message.chat.id)]</replace>
@@ -73,12 +102,13 @@
         <option value="$PROJECT_DIR$/user.json" />
         <option value="$PROJECT_DIR$/sourse/continuity.json" />
         <option value="$PROJECT_DIR$/sourse/gen.py" />
-        <option value="$PROJECT_DIR$/gen.py" />
         <option value="$PROJECT_DIR$/4444.json" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/sourse/users.json" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/sql.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/gen.py" />
+        <option value="$PROJECT_DIR$/sourse/continuity_convert_Unicod.json" />
       </list>
     </option>
   </component>
@@ -95,7 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,10 +132,16 @@
               <item name="telegram_Game" type="b2602c69:ProjectViewProjectNode" />
               <item name="telegram_Game" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="telegram_Game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="telegram_Game" type="462c0819:PsiDirectoryNode" />
+              <item name="sourse" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.gen">
     <configuration name="gen" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="telegram_Game" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,20 +227,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544730217143</updated>
-    </task>
-    <task id="LOCAL-00041" summary="fix db">
-      <created>1545065823091</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1545065823091</updated>
-    </task>
-    <task id="LOCAL-00042" summary="fix 2 db">
-      <created>1545066127869</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1545066127869</updated>
     </task>
     <task id="LOCAL-00043" summary="fix 3 db">
       <created>1545066508023</created>
@@ -536,7 +557,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545472753158</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="db include fix 8">
+      <created>1545473939168</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1545473939169</updated>
+    </task>
+    <task id="LOCAL-00091" summary="db include fix 8">
+      <created>1545474622199</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1545474622199</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -550,19 +585,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983957" visible="true" weight="0.14602003" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983957" visible="true" weight="0.14602003" />
       <window_info id="Structure" order="1" sideWeight="0.50160426" side_tool="true" weight="0.12756985" />
       <window_info id="Favorites" order="2" sideWeight="0.50160426" side_tool="true" weight="0.12756985" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49973643" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49973643" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.4641711" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3272727" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3272727" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -667,6 +703,22 @@
     <MESSAGE value="db include fix 8" />
     <option name="LAST_COMMIT_MESSAGE" value="db include fix 8" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gen.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gen.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../telegramBot/main.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,29 +759,8 @@
     <entry file="file://$PROJECT_DIR$/sourse/logotypea.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourse/continuity_convert_Unicod.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21954" selection-start-column="21908" selection-end-column="21954" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/4444.json" />
-    <entry file="file://$PROJECT_DIR$/sourse/continuity.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="141" column="1" selection-start-line="129" selection-end-line="141" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sourse/users.json" />
-    <entry file="file://$PROJECT_DIR$/gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -737,10 +768,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourse/continuity.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="141" column="1" selection-end-line="320" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+        <state relative-caret-position="360">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="49" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#457#471#0" expanded="true" />
@@ -750,7 +795,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="270">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -758,10 +803,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="782">
+          <caret line="324" column="14" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourse/continuity_convert_Unicod.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="33" column="428" selection-start-line="33" selection-start-column="428" selection-end-line="33" selection-end-column="428" />
         </state>
       </provider>
     </entry>
