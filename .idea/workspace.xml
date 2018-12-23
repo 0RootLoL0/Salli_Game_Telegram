@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="071f4797-bda6-4b3d-9245-028540d4e210" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/continuity.json" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/continuity.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sourse/continuity_convert_Unicod.json" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/continuity_convert_Unicod.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sourse/continuity_convert_Unicod.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="33" column="428" selection-start-line="33" selection-start-column="428" selection-end-line="33" selection-end-column="428" />
+            <state relative-caret-position="315">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -227,20 +224,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544730217143</updated>
-    </task>
-    <task id="LOCAL-00043" summary="fix 3 db">
-      <created>1545066508023</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1545066508023</updated>
-    </task>
-    <task id="LOCAL-00044" summary="test">
-      <created>1545068866278</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1545068866278</updated>
     </task>
     <task id="LOCAL-00045" summary="back">
       <created>1545069412577</created>
@@ -571,7 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545474622199</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="add root2">
+      <created>1545526205527</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1545526205533</updated>
+    </task>
+    <task id="LOCAL-00093" summary="add root2">
+      <created>1545526585589</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1545526585589</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -587,7 +584,7 @@
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983957" visible="true" weight="0.14602003" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983957" visible="true" weight="0.14602003" />
       <window_info id="Structure" order="1" sideWeight="0.50160426" side_tool="true" weight="0.12756985" />
       <window_info id="Favorites" order="2" sideWeight="0.50160426" side_tool="true" weight="0.12756985" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -598,7 +595,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.4641711" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3272727" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3272727" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -676,7 +673,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="save 2" />
     <MESSAGE value="save fix 3" />
     <MESSAGE value="save fix 4" />
     <MESSAGE value="save fix 5" />
@@ -701,7 +697,8 @@
     <MESSAGE value="db include fix 6" />
     <MESSAGE value="db include fix 7" />
     <MESSAGE value="db include fix 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="db include fix 8" />
+    <MESSAGE value="add root2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add root2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -812,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sourse/continuity_convert_Unicod.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="33" column="428" selection-start-line="33" selection-start-column="428" selection-end-line="33" selection-end-column="428" />
+        <state relative-caret-position="315">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
         </state>
       </provider>
     </entry>
