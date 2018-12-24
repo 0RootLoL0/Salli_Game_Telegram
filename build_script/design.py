@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'design.ui'
+# Form implementation generated from reading ui file '/home/rootlol/PycharmProjects/telegram_Game/build_script/design.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -51,8 +51,11 @@ class Ui_MainWindow(object):
         self.groupBox_2.setGeometry(QtCore.QRect(390, 10, 215, 300))
         self.groupBox_2.setObjectName("groupBox_2")
         self.listWidget = QtWidgets.QListWidget(self.groupBox_2)
-        self.listWidget.setGeometry(QtCore.QRect(0, 22, 215, 277))
+        self.listWidget.setGeometry(QtCore.QRect(0, 22, 215, 245))
         self.listWidget.setObjectName("listWidget")
+        self.pushButton_3 = QtWidgets.QPushButton(self.groupBox_2)
+        self.pushButton_3.setGeometry(QtCore.QRect(0, 267, 215, 32))
+        self.pushButton_3.setObjectName("pushButton_3")
         self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox_3.setGeometry(QtCore.QRect(390, 320, 215, 131))
         self.groupBox_3.setObjectName("groupBox_3")
@@ -97,6 +100,7 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "номер сцены"))
         self.pushButton.setText(_translate("MainWindow", "add"))
         self.groupBox_2.setTitle(_translate("MainWindow", "ответы:"))
+        self.pushButton_3.setText(_translate("MainWindow", "del"))
         self.groupBox_3.setTitle(_translate("MainWindow", "состояние игрока"))
         self.lineEdit_3.setText(_translate("MainWindow", "0"))
         self.lineEdit_4.setText(_translate("MainWindow", "0"))

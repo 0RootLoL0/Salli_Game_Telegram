@@ -2,8 +2,7 @@ import sys  # sys нужен для передачи argv в QApplication
 from PyQt5 import QtWidgets
 import json
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon
-import design  # Это наш конвертированный файл дизайна
+from build_script import design
 
 root_game = []
 otvet = []
@@ -20,6 +19,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.pushButton.clicked.connect(self.addComment)
         self.pushButton2.clicked.connect(self.gen)
         self.pushButton_2.clicked.connect(self.save)
+        self.pushButton_3.clicked.connect(self.del_list)
         self.lcdNumber.display(0)
         self.show()
 
@@ -42,6 +42,16 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         if len(otvet) != 0:
             del otvet[0]
 
+    def del_list(self):
+        if len(otvet) != 0:
+            del otvet[len(otvet)-1]
+        nomer = 1
+        self.listWidget.clear()
+        for item in otvet:
+            self.listWidget.addItem(str(nomer) + ' ' + item['text'] + ' -----> ' + str(item['schena']))
+            nomer += 1
+
+
     def save(self):
         with open('root.json', 'w') as outfile:
             json.dump(root_game, outfile)
@@ -49,6 +59,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
     def keyPressEvent(self, e):
         if e.key() == Qt.Key_Escape:
             self.addComment()
+        el
 
 
 def main():
@@ -56,7 +67,5 @@ def main():
     window = ExampleApp()
     window.show()
     app.exec_()
-
-
 if __name__ == '__main__':
     main()
