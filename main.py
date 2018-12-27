@@ -7,7 +7,6 @@
 #  ". ######:: ##:::: ##: ########: ########:'####:"
 #  ":......:::..:::::..::........::........::....::"
 #  telegram bot Game text quest
-
 import telebot
 import json
 from telebot import types
@@ -16,13 +15,13 @@ from multiprocessing import Process, Queue
 with open('sourse/continuity_convert_Unicod.json') as f:
   textMess = json.load(f)
   f.close()
-bot = telebot.TeleBot("733098942:AAESpQhj-4Pt4X3WTSdShUMcFnkTdGRenTE")
+bot = telebot.TeleBot("qqq")
+
 def db_use(type_rec, rec_w):
   def execute(queue, result_n, rec):
     proc = Popen('python3 sql.py ' + str(result_n) + ' \"' + str(rec) + '\"', shell=True, stdout=PIPE)
     proc.wait()  # дождаться выполнения
-    queue.put(proc.communicate()[0])  ## получить то, что вернул подпроцесс
-
+    queue.put(proc.communicate()[0])
   queue = Queue()
   p = Process(target=execute, args=(queue, type_rec, rec_w))
   p.start()
@@ -32,14 +31,12 @@ def db_use(type_rec, rec_w):
   else:
     return json.loads(queue.get().decode('utf-8'))
 
-
-# сделан
 @bot.message_handler(commands=['statistics_0rootlol0'])
 def statistics_0rootlol0(message):
   user_len = db_use(1, "SELECT count(*) FROM users")[0][0]
   bot.send_message(message.chat.id, "количество зарегистрированых Users`:  " + str(user_len))
   print(db_use(0, "UPDATE users SET schena_p=0 WHERE id=" + str(message.chat.id)))
-# сделан
+
 def condition(message):
   hard, hangree = db_use(1, "SELECT hard, hangree FROM users WHERE id="+str(message.chat.id))[0]
   bot.send_message(message.chat.id, "Ед.жизни:  " + str(hard) +
